@@ -1,74 +1,96 @@
-/* Reset some default styles and set a background color */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+/* Your existing styles... */
+
+/* Add styles for the dark theme */
+.dark-theme {
+  background: url('background-image.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-/* Header styling with centered profile picture */
-header {
+.dark-theme .profile-link {
   text-align: center;
   padding: 20px;
-  background-color: #333;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  margin-top: 20px;
 }
 
-.profile-picture {
+.dark-theme .profile-link .profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.dark-theme .profile-link a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.dark-theme .profile-link a:hover {
+  color: #ffcc00;
+}
+
+/* Styles for the round profile images */
+.profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.profile-picture img {
+.profile-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Navigation styling */
-nav {
-  background-color: #333;
+/* Styles for the profile names and descriptions */
+.profile-link h2 {
+  color: whitesmoke;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.about-me {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  padding-top: 40px;
+  border-radius: 10px;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
+.about-me h2 {
+  color: #ffcc00;
+}
+
+.about-me p {
+  color: slateblue;
+  font-size: 16px;
+  margin: 0;
+}
+
+body.dark-theme {
+  margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333; /* Change the background color to a darker shade, e.g., #333 */
+  color: darkgray;
 }
 
-nav ul li {
-  display: inline;
-  margin: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Main content styling */
 main {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #3b3737;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-article {
-  margin-bottom: 20px;
-}
-
-/* Footer styling */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-}
-
-
