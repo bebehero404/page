@@ -1,3 +1,16 @@
 body {
-    background-color: cadetblue;
+    background-color: black;
+}
+
+.img_div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img_div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
