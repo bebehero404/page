@@ -1,0 +1,30 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #countdown {
+    font-size: 3em;
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 20px;
+    background-color: #87CEFA; /* Change this color to your preference */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: -50px;
+    font-family: 'Roboto', 'Arial', sans-serif; /* Modern and straightforward font */
+  }
+  
+  #countdown.expired {
+    color: #ff0000;
+  }
+  
+  body.expired {
+    background-color: #e57373; /* Light red background for expired state */
+  }
+  
