@@ -8,6 +8,11 @@
 </head>
 <body>
 
+  <audio autoplay loop>
+    <source src="Lavern_-_Hold_Me(256k).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
 <div id="countdown"></div>
 
 <script>
@@ -32,10 +37,12 @@
     document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     // If the countdown is over, display a message
+    // If the countdown is over, redirect to another website
     if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+    window.location.href = "https://www.spacex.com/launches/mission/?missionId=starship-flight-2"; // Replace with your desired URL
+}
   }, 1000);
 </script>
 
