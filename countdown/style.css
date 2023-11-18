@@ -1,30 +1,37 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  #countdown {
-    font-size: 3em;
-    color: #ffffff; /* White text color */
-    text-align: center;
-    padding: 20px;
-    background-color: #87CEFA; /* Change this color to your preference */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: -50px;
-    font-family: 'Roboto', 'Arial', sans-serif; /* Modern and straightforward font */
-  }
-  
-  #countdown.expired {
-    color: #ff0000;
-  }
-  
-  body.expired {
-    background-color: #e57373; /* Light red background for expired state */
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column; /* Added to arrange content vertically */
+}
+
+h1 {
+  font-size: 4em; /* Adjust the font size as needed */
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: #193444; /* Adjust the color to your preference */
+  margin-bottom: 100px; /* Add spacing between the header and countdown */
+}
+
+#countdown {
+  font-size: 3em;
+  color: #ffffff; /* White text color */
+  text-align: center;
+  padding: 20px;
+  background-color: #193444; /* Change this color to your preference */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: -50px;
+  font-family: 'Roboto', 'Arial', sans-serif; /* Modern and straightforward font */
+}
+
+#countdown.expired {
+  color: #ff0000;
+}
+
+body.expired {
+  background-color: #e57373; /* Light red background for expired state */
+}

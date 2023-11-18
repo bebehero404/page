@@ -7,17 +7,27 @@
   <title>Countdown Timer</title>
 </head>
 <body>
+ <h1>IFT-2</h1>
 
-  <audio autoplay loop volume="0.5">
-    <source src="Lavern_-_Hold_Me(256k).mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+<audio id="backgroundMusic" autoplay loop>
+  <source src="Lavern_-_Hold_Me(256k).mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
 
 <div id="countdown"></div>
 
 <script>
   // Set the date we're counting down to (November 18, 2023, 7:30 PM GMT-0500)
   const countDownDate = new Date("Nov 18, 2023 19:30:00 GMT+0630").getTime();
+
+  // Get the audio element
+  const audio = document.getElementById("backgroundMusic");
+
+  // Set the volume after the page loads
+  document.addEventListener("DOMContentLoaded", function() {
+    audio.volume = 0.1; // Adjust the volume as needed (0.0 to 1.0)
+    audio.play();
+  });
 
   // Update the countdown every 1 second
   const x = setInterval(function() {
@@ -36,13 +46,12 @@
     // Display the countdown
     document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-    // If the countdown is over, display a message
     // If the countdown is over, redirect to another website
     if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
-    window.location.href = "https://www.spacex.com/launches/mission/?missionId=starship-flight-2"; // Replace with your desired URL
-}
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+      window.location.href = "https://www.spacex.com/launches/mission/?missionId=starship-flight-2"; // Replace with your desired URL
+    }
   }, 1000);
 </script>
 
