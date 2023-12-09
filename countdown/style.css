@@ -1,37 +1,140 @@
+/* general styling */
+:root {
+    --smaller: .75;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  flex-direction: column; /* Added to arrange content vertically */
+    align-items: center;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    font-family: -apple-system, 
+        BlinkMacSystemFont, 
+        "Segoe UI", 
+        Roboto, 
+        Oxygen-Sans, 
+        Ubuntu, 
+        Cantarell, 
+        "Helvetica Neue", 
+        sans-serif;
+}
+
+.container {
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
-  font-size: 4em; /* Adjust the font size as needed */
-  font-family: 'Roboto', 'Arial', sans-serif;
-  color: #193444; /* Adjust the color to your preference */
-  margin-bottom: 100px; /* Add spacing between the header and countdown */
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#countdown {
-  font-size: 3em;
-  color: #ffffff; /* White text color */
-  text-align: center;
-  padding: 20px;
-  background-color: #193444; /* Change this color to your preference */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-top: -50px;
-  font-family: 'Roboto', 'Arial', sans-serif; /* Modern and straightforward font */
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    color: #ffcc00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#countdown.expired {
-  color: #ff0000;
+li span {
+    display: block;
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
-body.expired {
-  background-color: #e57373; /* Light red background for expired state */
+.countdown-container {
+    display: flex;
+    justify-content: center;
 }
+
+.countdown-item {
+    margin: 0 1em;
+}
+
+.countdown-value {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.emoji {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+
+/* Add the following styles for the countdown animation */
+@keyframes countdownAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    animation: countdownAnimation 1.5s infinite; /* Adjust the animation duration as needed */
+}
+
+.countdown-item {
+    margin: 0 1em;
+    animation: countdownAnimation 1.5s infinite; /* Adjust the animation duration as needed */
+}
+
+.countdown-value {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.emoji {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    animation: countdownAnimation 1.5s infinite; /* Adjust the animation duration as needed */
+}
+
+

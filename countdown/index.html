@@ -1,59 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css?v=2">
-  <title>Countdown Timer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
- <h1>IFT-2</h1>
-
-<audio id="backgroundMusic" autoplay loop>
-  <source src="Lavern_-_Hold_Me(256k).mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
-
-<div id="countdown"></div>
-
-<script>
-  // Set the date we're counting down to (November 18, 2023, 7:30 PM GMT-0500)
-  const countDownDate = new Date("Nov 18, 2023 19:30:00 GMT+0630").getTime();
-
-  // Get the audio element
-  const audio = document.getElementById("backgroundMusic");
-
-  // Set the volume after the page loads
-  document.addEventListener("DOMContentLoaded", function() {
-    audio.volume = 0.1; // Adjust the volume as needed (0.0 to 1.0)
-    audio.play();
-  });
-
-  // Update the countdown every 1 second
-  const x = setInterval(function() {
-    // Get the current date and time
-    const now = new Date().getTime();
-
-    // Calculate the remaining time
-    const distance = countDownDate - now;
-
-    // Calculate days, hours, minutes, and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the countdown
-    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    // If the countdown is over, redirect to another website
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
-      window.location.href = "https://www.spacex.com/launches/mission/?missionId=starship-flight-2"; // Replace with your desired URL
-    }
-  }, 1000);
-</script>
-
+<div class="container">
+    <h1 id="headline">New Year Countdown</h1>
+    <div id="countdown">
+        <ul>
+            <li><span id="days"></span>days</li>
+            <li><span id="hours"></span>hours</li>
+            <li><span id="minutes"></span>minutes</li>
+            <li><span id="seconds"></span>seconds</li>
+        </ul>
+    </div>
+    <div id="content" class="emoji">
+        <span>🥳</span>
+        <span>🎉</span>
+        <span>🎆</span>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
