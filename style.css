@@ -1,6 +1,8 @@
+/* style.css */
+
 /* Your existing styles... */
 
-/* Add styles for the dark theme */
+/* Styles for the dark theme */
 .dark-theme {
   background: url('background-image.jpg') no-repeat center center;
   background-size: cover;
@@ -94,3 +96,24 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Add styles for the countdown section */
+#countdown-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#countdown {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff; /* Text color for the countdown */
+  background-color: #333; /* Background color for the countdown */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#countdown-container h2 {
+  color: #fff;
+}
+
